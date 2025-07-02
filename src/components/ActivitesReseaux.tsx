@@ -1,6 +1,6 @@
 // src/components/ActivitesReseaux.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, Calendar, Users } from 'lucide-react';
+import {  Calendar, Users } from 'lucide-react';
 
 interface ActivitesReseauxProps {
   navigateTo: (page: string, data?: any) => void;

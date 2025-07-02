@@ -1,6 +1,6 @@
 // src/components/LexiqueVocabulaireParlementaire.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, Search, Users, FileText, Video, Building, Globe } from 'lucide-react';
+import {  Search} from 'lucide-react';
 
 // Interface pour les props de la page
 interface LexiqueVocabulaireParlementaireProps {

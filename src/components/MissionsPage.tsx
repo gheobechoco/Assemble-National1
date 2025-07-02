@@ -1,6 +1,6 @@
 // src/components/MissionsPage.tsx
 import React, { useState, useEffect } from 'react'; // Import useState and useEffect for sidebar functionality
-import { Home, FileText } from 'lucide-react'; // Import Home and FileText icons from Lucide React
+import { Home } from 'lucide-react'; // Import Home and FileText icons from Lucide React
 
 // Données pour les articles "À la une" avec des images de remplacement (copied from BureauPage)
 const featuredArticles = [

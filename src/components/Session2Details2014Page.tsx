@@ -1,6 +1,6 @@
 // src/components/SessionDetailsPage.tsx
 import React from 'react';
-import { Home, BookOpen, Calendar, FileText } from 'lucide-react';
+import { Home, Calendar, FileText } from 'lucide-react';
 
 interface SessionDetailsPageProps {
   navigateTo: (page: string, data?: any) => void;

@@ -1,6 +1,6 @@
 // src/components/RepertoireLoisAdopteesPage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, FileText, Video, Building, Globe } from 'lucide-react';
+
 
 // Interface pour les props de la page
 interface RepertoireLoisAdopteesPageProps {
