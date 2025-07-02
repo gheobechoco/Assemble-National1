@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Cible la version ECMAScript 2020
+    "useDefineForClassFields": true, // Utilise la sémantique 'define' pour les champs de classe (conforme aux standards ES)
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Inclut les bibliothèques par défaut (ECMAScript, DOM pour le navigateur)
+    "module": "ESNext", // Utilise le système de modules ESNext (modules ECMAScript)
+    "skipLibCheck": true, // Désactive la vérification de type des fichiers de déclaration de librairies (plus rapide)
+
+    /* Mode Bundler */
+    "moduleResolution": "bundler", // Stratégie de résolution des modules adaptée aux bundlers (Vite)
+    "allowImportingTsExtensions": true, // Permet l'importation de fichiers .ts/.tsx sans l'extension dans le code
+    "isolatedModules": true, // Assure que chaque fichier peut être transpilé indépendamment
+    "moduleDetection": "force", // Force la détection des modules pour tous les fichiers
+    "noEmit": true, // TypeScript ne génère pas de fichiers JavaScript, Vite s'en charge
+    "jsx": "react-jsx", // Active la transformation JSX pour React 17+ (nouvelle syntaxe sans import React)
+
+    /* Inclusion des types Node.js */
+    "types": ["node"], // AJOUTÉ : Inclut les définitions de types pour l'environnement Node.js
+
+    /* Linting (vérification de code) */
+    "strict": true, // Active toutes les options de vérification de type strictes
+    "noUnusedLocals": true, // Signale les variables locales inutilisées
+    "noUnusedParameters": true, // Signale les paramètres de fonction inutilisés
+    "noFallthroughCasesInSwitch": true // Exige un 'break' dans chaque case de switch (sauf s'il y a un commentaire explicite)
+  },
+  "include": ["src"] // Inclut tous les fichiers dans le dossier 'src' pour la compilation
+}

@@ -1,0 +1,107 @@
+/* Directives de base de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles spécifiques au slider Parallax */
+.parallax-slider {
+  perspective: 1px; /* Active l'effet 3D pour le parallaxe */
+  height: 80vh; /* Hauteur du slider, 80% de la hauteur de la fenêtre */
+  overflow: hidden; /* Cache le contenu qui dépasse */
+  position: relative;
+}
+
+.da-slider {
+  position: relative;
+  height: 100%;
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+  background-attachment: fixed; /* Rend l'image de fond fixe par rapport au viewport, créant l'effet parallaxe */
+  /* Transition pour le mouvement de l'image de fond */
+  transition: background-position 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.da-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex; /* Utilise flexbox pour l'alignement du contenu */
+  align-items: center; /* Centre verticalement le contenu */
+  will-change: transform, opacity; /* Optimisation pour l'animation */
+  opacity: 0; /* Par défaut, les diapositives sont invisibles */
+}
+
+/* Animation pour la diapositive entrante (vient de la droite) */
+.da-slide-fromright {
+  animation: slideFromRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%); /* Commence hors de l'écran à droite */
+    opacity: 0; /* Commence invisible */
+  }
+  100% {
+    transform: translateX(0); /* Se déplace vers sa position finale */
+    opacity: 1; /* Devient complètement visible */
+  }
+}
+
+/* Animation pour la diapositive sortante (va vers la gauche) */
+.da-slide-toleft {
+  animation: slideToLeft 0.8s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(0); /* Commence à sa position actuelle */
+    opacity: 1; /* Commence visible */
+  }
+  100% {
+    transform: translateX(-100%); /* Se déplace hors de l'écran à gauche */
+    opacity: 0; /* Devient invisible */
+  }
+}
+
+.slide-details {
+  max-width: 50%; /* Largeur maximale pour le bloc de texte */
+  padding-left: 5%; /* Marge intérieure à gauche */
+  z-index: 10; /* Assure que le texte est au-dessus de la superposition */
+}
+
+.da-img {
+  position: absolute;
+  right: 5%; /* Position à 5% du bord droit */
+  bottom: 10%; /* Position à 10% du bas */
+  z-index: 2; /* Positionne l'image au-dessus du fond mais en dessous du texte principal */
+}
+
+/* Ajustements responsifs pour différentes tailles d'écran */
+@media (max-width: 768px) {
+  .parallax-slider {
+    height: 60vh; /* Réduit la hauteur du slider sur les écrans plus petits */
+  }
+
+  .slide-details {
+    max-width: 90%; /* Augmente la largeur du texte pour mieux s'adapter */
+    padding-left: 5%;
+    padding-right: 5%; /* Ajoute un padding à droite pour le centrage */
+  }
+
+  .da-img {
+    display: none; /* Cache l'image de la diapositive sur les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-slider {
+    height: 50vh; /* Réduit encore la hauteur sur les très petits écrans */
+  }
+}
+
+/* Transitions douces pour tous les éléments interactifs (améliore l'expérience utilisateur) */
+* {
+  transition-property: transform, opacity, background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
