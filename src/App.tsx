@@ -299,7 +299,7 @@ const App: React.FC = () => {
             {/* Logo fictif */}
             <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-yellow-500 rounded-full flex items-center justify-center">
               <img
-  src="public/images/blason_rep.png" // <-- Remplacez cette URL par celle de votre blason
+  src="/images/blason_rep.png" // <-- Remplacez cette URL par celle de votre blason
   alt="Blason de l'Assemblée Nationale"
   className="w-17 h-17 rounded-full object-cover border-2 border-white shadow-lg"
   onError={(e) => {

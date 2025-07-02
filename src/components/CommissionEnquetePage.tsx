@@ -1,6 +1,6 @@
 // src/components/CommissionEnquetePage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, Search, Users, FileText, Video, Building, Globe } from 'lucide-react';
+
 
 // Interface pour les props de la page
 interface CommissionEnquetePageProps {
@@ -147,9 +147,7 @@ const CommissionEnquetePage: React.FC<CommissionEnquetePageProps> = ({ navigateT
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <div className="p-3 bg-gray-100 border-l border-gray-300">
-              <Search className="w-5 h-5 text-gray-500" />
-            </div>
+        
           </div>
 
           {filteredCommissions.length > 0 ? (

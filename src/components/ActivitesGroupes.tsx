@@ -1,6 +1,5 @@
 // src/components/ActivitesGroupes.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, Users, Calendar } from 'lucide-react';
 
 interface ActivitesGroupesProps {
   navigateTo: (page: string, data?: any) => void;
@@ -125,14 +124,8 @@ const ActivitesGroupes: React.FC<ActivitesGroupesProps> = ({ navigateTo }) => {
                   )}
                   <h3 className="text-xl font-semibold text-blue-700 mb-3">{activite.titre}</h3>
                   <p className="text-gray-700 mb-2">{activite.description}</p>
-                  <p className="text-sm text-gray-600 flex items-center">
-                    <Calendar className="w-4 h-4 mr-1 text-gray-500" />
-                    {activite.date}
-                  </p>
-                  <p className="text-sm text-gray-600 flex items-center">
-                    <Users className="w-4 h-4 mr-1 text-gray-500" />
-                    Groupe : {activite.groupe}
-                  </p>
+                  
+                 
                 </div>
               ))}
             </div>
