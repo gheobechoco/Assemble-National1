@@ -1,6 +1,7 @@
 // src/components/ActivitesMultilateralesPage.tsx
 import React, { useState, useEffect } from 'react';
-//import { Home, Users, Globe } from 'lucide-react';
+//
+// mport { Home, Users, Globe } from 'lucide-react';
 
 interface ActivitesMultilateralesPageProps {
   navigateTo: (page: string, data?: any) => void;

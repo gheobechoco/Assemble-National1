@@ -1,6 +1,5 @@
 // src/components/BureauPage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, FileText, Download } from 'lucide-react'; // Importation des icônes
 
 // Données pour les articles "À la une" avec des images de remplacement
 const featuredArticles = [
@@ -110,7 +109,7 @@ const BureauPage: React.FC = () => {
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="#" className="flex items-center hover:text-blue-600 transition-colors" onClick={(e) => e.preventDefault()}>
-                  <Home className="w-4 h-4 mr-1" />
+                  
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>
@@ -161,8 +160,8 @@ const BureauPage: React.FC = () => {
                 download="Membres et fonctions du Bureau.pdf"
                 className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow-md"
               >
-                <Download className="w-5 h-5 mr-2" />
-                Télécharger le document
+            
+      
               </a>
             </div>
           </div>

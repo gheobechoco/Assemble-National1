@@ -1,6 +1,6 @@
 // src/components/JournalDebatsPage.tsx
 import React from 'react';
-import { Home, BookOpen, ChevronRight } from 'lucide-react'; // Importation des icônes nécessaires
+import {  BookOpen, ChevronRight } from 'lucide-react'; // Importation des icônes nécessaires
 
 interface JournalDebatsPageProps {
   navigateTo: (page: string, data?: any) => void;
@@ -27,7 +27,7 @@ const JournalDebatsPage: React.FC<JournalDebatsPageProps> = ({ navigateTo }) => 
           <ul className="flex items-center space-x-2 text-sm text-gray-600">
             <li>
               <a href="#" className="flex items-center hover:text-blue-600 transition-colors" onClick={(e) => { e.preventDefault(); navigateTo('accueil'); }}>
-                <Home className="w-4 h-4 mr-1" />
+              
                 <span className="hidden sm:inline">Accueil</span>
               </a>
             </li>

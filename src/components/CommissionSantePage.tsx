@@ -1,6 +1,5 @@
 // src/components/CommissionSantePage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home } from 'lucide-react'; // Importation de l'icône Home
 
 // Données pour les articles "À la une" avec des images de remplacement (réutilisées)
 const featuredArticles = [
@@ -43,14 +42,6 @@ const commissionSanteBureauImages: { [key: string]: string } = {
 };
 
 // Données des membres du bureau de la commission de la santé
-const commissionSanteBureauMembers = [
-  { name: "Angelique NGOMA", role: "Présidente", imageKey: "Angelique NGOMA" },
-  { name: "AKURE DAVAIN Séraphin", role: "1er Vice-Président", imageKey: "AKURE DAVAIN Séraphin" },
-  { name: "OWONO MBOUENGOU Jean-Placide", role: "2ème Vice-Président", imageKey: "OWONO MBOUENGOU Jean-Placide" },
-  { name: "MOUITY MOUNDOUNGA Patrice", role: "1er Rapporteur", imageKey: "MOUITY MOUNDOUNGA Patrice" },
-  { name: "DOUFOUNDOU Emerencienne", role: "2ème Rapporteur", imageKey: "DOUFOUNDOU Emerencienne" },
-  { name: "NGOUNDJI Staelle Lidwine", role: "3ème Rapporteur", imageKey: "NGOUNDJI Staelle Lidwine" },
-];
 
 // Liste complète des membres de la commission de la santé (basée sur les captures d'écran et complétée)
 const allCommissionSanteMembers = [
@@ -101,7 +92,7 @@ const CommissionSantePage: React.FC = () => {
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="/" className="flex items-center hover:text-blue-600 transition-colors">
-                  <Home className="w-4 h-4 mr-1" />
+                
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>

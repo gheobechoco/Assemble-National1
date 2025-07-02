@@ -1,6 +1,5 @@
 // src/components/ActivitesSections.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, FileText, Video, Building, Globe } from 'lucide-react';
 
 interface ActivitesSectionsProps {
   navigateTo: (page: string, data?: any) => void;

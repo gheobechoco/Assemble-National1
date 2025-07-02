@@ -1,6 +1,6 @@
 // src/components/EvenementsPage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, Calendar, Users, Globe } from 'lucide-react';
+import { Calendar} from 'lucide-react';
 
 interface EvenementsPageProps {
   navigateTo: (page: string, data?: any) => void;

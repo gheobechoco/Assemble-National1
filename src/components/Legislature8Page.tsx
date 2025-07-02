@@ -1,6 +1,6 @@
 // src/components/Legislature8Page.tsx
 import React, { useState, useEffect } from 'react';
-import { Home } from 'lucide-react';
+
 
 // Définition de l'interface pour les props du composant
 interface Legislature8PageProps {
@@ -136,7 +136,7 @@ const Legislature8Page: React.FC<Legislature8PageProps> = ({ navigateTo }) => {
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="/" className="flex items-center hover:text-blue-600 transition-colors" onClick={(e) => { e.preventDefault(); navigateTo('accueil'); }}>
-                  <Home className="w-4 h-4 mr-1" />
+          
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>

@@ -1,6 +1,5 @@
 // src/components/AnciensPresidentsPage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home } from 'lucide-react'; // Importation de l'icône Home
 
 // Interface pour définir la structure d'un président
 interface President {
@@ -149,7 +148,7 @@ const AnciensPresidentsPage: React.FC<AnciensPresidentsPageProps> = ({ navigateT
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="#" className="flex items-center hover:text-blue-600 transition-colors" onClick={() => navigateTo('accueil')}>
-                  <Home className="w-4 h-4 mr-1" />
+                  
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>

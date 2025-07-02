@@ -42,14 +42,6 @@ const commissionPlanificationBureauImages: { [key: string]: string } = {
 };
 
 // Données des membres du bureau de la commission de planification
-const commissionPlanificationBureauMembers = [
-  { name: "TATY KOUMBA Jeanine", role: "Présidente", imageKey: "TATY KOUMBA Jeanine" },
-  { name: "NANG Thierry", role: "1er Vice-Président", imageKey: "NANG Thierry" },
-  { name: "EKOUA SIMA Jean-Paulin", role: "2ème Vice-Président", imageKey: "EKOUA SIMA Jean-Paulin" },
-  { name: "YEMBIT MANGALA Jean de Dieu", role: "1er Rapporteur", imageKey: "YEMBIT MANGALA Jean de Dieu" },
-  { name: "MENGUE M'AKKUE Diane", role: "2ème Rapporteur", imageKey: "MENGUE M'AKKUE Diane" },
-  { name: "IDODO Jean-Lambert", role: "3ème Rapporteur", imageKey: "IDODO Jean-Lambert" },
-];
 
 // Liste complète des membres de la commission de planification (basée sur les captures d'écran et complétée)
 const allCommissionPlanificationMembers = [

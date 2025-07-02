@@ -1,6 +1,6 @@
 // src/components/DeputesTransitionPage.tsx
 import React, { useState, useEffect } from 'react';
-import { Home, ChevronRight } from 'lucide-react'; // Importation des icônes nécessaires
+import {  ChevronRight } from 'lucide-react'; // Importation des icônes nécessaires
 
 // Données pour les articles "À la une" avec des images de remplacement (réutilisées)
 const featuredArticles = [
@@ -64,7 +64,7 @@ const DeputesTransitionPage: React.FC<DeputesTransitionPageProps> = ({ navigateT
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="/" className="flex items-center hover:text-blue-600 transition-colors">
-                  <Home className="w-4 h-4 mr-1" />
+                  
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>

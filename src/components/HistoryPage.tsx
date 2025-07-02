@@ -1,6 +1,5 @@
 // src/components/HistoryPage.tsx
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect for sidebar functionality
-import { Home } from 'lucide-react'; // Import Home and FileText icons from Lucide React
+import React, { useState, useEffect } from 'react'; // Import useState and useEffect for sidebar functionality// Import Home and FileText icons from Lucide React
 
 // Données pour les articles "À la une" avec des images de remplacement (copied from BureauPage/MissionsPage)
 const featuredArticles = [
@@ -61,7 +60,7 @@ const HistoryPage: React.FC<HistoryPageProps> = () => {
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="/" className="flex items-center hover:text-blue-600 transition-colors">
-                  <Home className="w-4 h-4 mr-1" />
+                
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>

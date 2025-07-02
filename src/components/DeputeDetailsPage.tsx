@@ -1,6 +1,6 @@
 // src/components/DeputeDetailsPage.tsx
 import React from 'react';
-import { Home, Briefcase, MapPin, Mail, Globe, Users, Landmark, User, FileText } from 'lucide-react';
+import {  Briefcase, MapPin, Mail, Globe, Users, Landmark, User, FileText } from 'lucide-react';
 
 // Interface pour les props de la page de détails du député
 interface DeputeDetailsPageProps {
@@ -133,7 +133,7 @@ const DeputeDetailsPage: React.FC<DeputeDetailsPageProps> = ({ depute, navigateT
             <ul className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
                 <a href="#" className="flex items-center hover:text-blue-600 transition-colors" onClick={() => navigateTo('accueil')}>
-                  <Home className="w-4 h-4 mr-1" />
+        
                   <span className="hidden sm:inline">Accueil</span>
                 </a>
               </li>
