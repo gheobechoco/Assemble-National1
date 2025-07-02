@@ -908,7 +908,7 @@ const App: React.FC = () => {
       case 'missions':
         return <MissionsPage navigateTo={navigateTo} />;
       case 'bureau':
-        return <BureauPage navigateTo={navigateTo} />;
+        return <BureauPage />;
       case 'conference-presidents':
         return <ConferencePresidentsPage navigateTo={navigateTo} />;
       case 'commissions-generales':
@@ -938,7 +938,7 @@ const App: React.FC = () => {
       case 'deputes-province':
         return <DeputesProvincePage navigateTo={navigateTo} />;
       case 'deputes-province-details':
-        return selectedProvince ? <DeputesByProvinceDetailsPage provinceName={selectedProvince} navigateTo={navigateTo} /> : <DeputesProvincePage navigateTo={navigateTo} />;
+        return selectedProvince ? <DeputesByProvinceDetailsPage provinceName={selectedProvince
       case 'anciens-presidents':
         return <AnciensPresidentsPage navigateTo={navigateTo} />;
       case 'president-biography':
