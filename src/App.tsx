@@ -189,7 +189,7 @@ const App: React.FC = () => {
   const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null); // Nouveau pour les sous-sous-menus
   const [deputeDetails, setDeputeDetails] = useState<any>(null);
   const [presidentDetails, setPresidentDetails] = useState<any>(null);
-  const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
+  // const [selectedProvince, setSelectedProvince] = useState<string | null>(null);
   const [sessionDetails, setSessionDetails] = useState<any>(null);
 
 
@@ -202,15 +202,15 @@ const App: React.FC = () => {
     if (page === 'depute-details') {
       setDeputeDetails(data);
       setPresidentDetails(null);
-      setSelectedProvince(null);
+      // setSelectedProvince(null);
       setSessionDetails(null);
     } else if (page === 'president-biography') {
       setPresidentDetails(data);
       setDeputeDetails(null);
-      setSelectedProvince(null);
+      // setSelectedProvince(null);
       setSessionDetails(null);
     } else if (page === 'deputes-province-details') {
-      setSelectedProvince(data);
+      // setSelectedProvince(data);
       setDeputeDetails(null);
       setPresidentDetails(null);
       setSessionDetails(null);
@@ -218,12 +218,12 @@ const App: React.FC = () => {
       setSessionDetails(data);
       setDeputeDetails(null);
       setPresidentDetails(null);
-      setSelectedProvince(null);
+      // setSelectedProvince(null);
     }
     else {
       setDeputeDetails(null);
       setPresidentDetails(null);
-      setSelectedProvince(null);
+      // setSelectedProvince(null);
       setSessionDetails(null);
     }
     setIsMobileMenuOpen(false);
