@@ -65,6 +65,7 @@ const allCommissionAffairesEtrangeresMembers = [
   "WAURA Fidèle", "YEMBIT MANGALA Jean de Dieu"
 ];
 
+// (Removed unused props interface and prop)
 const CommissionAffairesEtrangeresPage: React.FC = () => {
   // État pour gérer l'index de l'article "À la une" actuellement affiché
   const [currentArticleIndex, setCurrentArticleIndex] = useState(0);

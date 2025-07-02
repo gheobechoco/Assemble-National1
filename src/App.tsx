@@ -20,6 +20,7 @@ import DeputesTransitionPage from './components/DeputesTransitionPage';
 import DeputesAlphabetiquePage from './components/DeputesAlphabetiquePage';
 import DeputiesList from './components/DeputiesList';
 import ContacterDeputePage from './components/ContacterDeputePage';
+//import DeputesPage from './components/DeputesPage';
 import AnciensPresidentsPage from './components/AnciensPresidentsPage';
 import PresidentBiographyPage from './components/PresidentBiographyPage';
 import LegislaturesPrecedentesPage from './components/LegislaturesPrecedentesPage';
@@ -67,29 +68,10 @@ interface NewsArticle {
 }
 
 // Interface commune pour les props des pages qui reçoivent `navigateTo`
-interface PageProps {
-  navigateTo: (page: string, data?: any) => void;
-}
 
-// Interface pour la page des députés par province qui reçoit un nom de province
-interface DeputesByProvinceDetailsPageProps extends PageProps {
-  provinceName: string;
-}
 
-// Interface pour la page de biographie du président
-interface PresidentBiographyPageProps extends PageProps {
-  president: any; // Vous pouvez affiner ce type si vous avez une interface pour les présidents
-}
 
-// Interface pour la page de détails du député
-interface DeputeDetailsPageProps extends PageProps {
-  depute: any; // Vous pouvez affiner ce type si vous avez une interface pour les députés
-}
 
-// Interface pour la page de détails de session
-interface SessionDetailsPageProps extends PageProps {
-  session: any; // Vous pouvez affiner ce type si vous avez une interface pour les sessions
-}
 
 
 // Définition des éléments du menu de navigation avec leurs sous-menus
@@ -904,41 +886,41 @@ const App: React.FC = () => {
           </>
         );
       case 'historique':
-        return <HistoryPage navigateTo={navigateTo} />;
+        return <HistoryPage />;
       case 'missions':
-        return <MissionsPage navigateTo={navigateTo} />;
+        return <MissionsPage />;
       case 'bureau':
         return <BureauPage />;
       case 'conference-presidents':
-        return <ConferencePresidentsPage navigateTo={navigateTo} />;
+        return <ConferencePresidentsPage  />;
       case 'commissions-generales':
         return <CommissionsGeneralesPermanentesPage navigateTo={navigateTo} />;
       case 'commission-lois-details':
-        return <CommissionLoisPage navigateTo={navigateTo} />;
+        return <CommissionLoisPage />;
       case 'commission-finances-details':
         return <CommissionFinancesPage navigateTo={navigateTo} />;
       case 'commission-affaires-etrangeres-details':
-        return <CommissionAffairesEtrangeresPage navigateTo={navigateTo} />;
+        return <CommissionAffairesEtrangeresPage  />;
       case 'commission-sante-details':
-        return <CommissionSantePage navigateTo={navigateTo} />;
+        return <CommissionSantePage  />;
       case 'commission-environnement-details':
-        return <CommissionEnvironnementPage navigateTo={navigateTo} />;
+        return <CommissionEnvironnementPage  />;
       case 'commission-planification-details':
-        return <CommissionPlanificationPage navigateTo={navigateTo} />;
+        return <CommissionPlanificationPage  />;
       case 'deputes-transition':
         return <DeputesTransitionPage navigateTo={navigateTo} />;
       case 'femmes-deputes':
-        return <DeputiesList navigateTo={navigateTo} />;
+        return <DeputiesList />;
       case 'contacter-depute':
         return <ContacterDeputePage navigateTo={navigateTo} />;
       case 'depute-details':
         return deputeDetails ? <DeputeDetailsPage depute={deputeDetails} navigateTo={navigateTo} /> : <DeputesTransitionPage navigateTo={navigateTo} />;
       case 'deputes-alphabetique':
-        return <DeputesAlphabetiquePage navigateTo={navigateTo} />;
+        return <DeputesAlphabetiquePage  />;
       case 'deputes-province':
-        return <DeputesProvincePage navigateTo={navigateTo} />;
+        return <DeputesProvincePage onSelectProvince={(provinceId: string) => navigateTo('deputes-province-details', provinceId)} />;
       case 'deputes-province-details':
-        return selectedProvince ? <DeputesByProvinceDetailsPage provinceName={selectedProvince
+        return <DeputesProvincePage onSelectProvince={(provinceId: string) => navigateTo('deputes-province-details', provinceId)} />;
       case 'anciens-presidents':
         return <AnciensPresidentsPage navigateTo={navigateTo} />;
       case 'president-biography':
@@ -958,7 +940,7 @@ const App: React.FC = () => {
       case 'legislature-8':
         return <Legislature8Page navigateTo={navigateTo} />;
       case 'deputes':
-        return <DeputesPage navigateTo={navigateTo} />;
+        return <ContacterDeputePage navigateTo={navigateTo} />;
       case 'journal-debats':
         return <JournalDebatsPage navigateTo={navigateTo} />;
       case 'synthese-travaux':

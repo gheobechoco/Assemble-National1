@@ -43,14 +43,6 @@ const commissionFinancesBureauImages: { [key: string]: string } = {
 };
 
 // Données des membres du bureau de la commission des finances
-const commissionFinancesBureauMembers = [
-  { name: "Pacôme Rufin ONDZOUNGA", role: "Président", imageKey: "Pacôme Rufin ONDZOUNGA" },
-  { name: "MBOUMI NZINZI Jean-Claude", role: "1er Vice-Président", imageKey: "MBOUMI NZINZI Jean-Claude" },
-  { name: "EYEGHE Ali", role: "2ème Vice-Président", imageKey: "EYEGHE Ali" },
-  { name: "MATSIENDI Roland", role: "1er Rapporteur", imageKey: "MATSIENDI Roland" },
-  { name: "OGOULIGUENDE Pepeçy", role: "2ème Rapporteur", imageKey: "OGOULIGUENDE Pepeçy" },
-  { name: "LEKOGO Justine Judith", role: "3ème Rapporteur", imageKey: "LEKOGO Justine Judith" },
-];
 
 // Liste complète des membres de la commission des finances (basée sur les captures d'écran et complétée)
 const allCommissionFinancesMembers = [
@@ -74,8 +66,13 @@ const allCommissionFinancesMembers = [
   "WAURA Fidèle", "YEMBIT MANGALA Jean de Dieu"
 ];
 
+// (navigateTo prop removed because it is unused)
 
-const CommissionFinancesPage: React.FC = () => {
+interface CommissionFinancesPageProps {
+  navigateTo: (page: string, data?: any) => void;
+}
+
+const CommissionFinancesPage: React.FC<CommissionFinancesPageProps> = () => {
   // État pour gérer l'index de l'article "À la une" actuellement affiché
   const [currentArticleIndex, setCurrentArticleIndex] = useState(0);
 

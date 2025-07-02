@@ -32,7 +32,9 @@ const presidentImages: { [key: string]: string } = {
   "placeholder_member": "https://placehold.co/150x150/e0e0e0/333333?text=Membre" // Image générique d'un membre
 };
 
-const HistoryPage: React.FC = () => {
+interface HistoryPageProps {}
+
+const HistoryPage: React.FC<HistoryPageProps> = () => {
   // État pour gérer l'index de l'article "À la une" actuellement affiché
   const [currentArticleIndex, setCurrentArticleIndex] = useState(0);
 
